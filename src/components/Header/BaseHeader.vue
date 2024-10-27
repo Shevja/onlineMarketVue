@@ -12,12 +12,14 @@ const links = ref([
 </script>
 
 <template>
-    <div class="p-2">
-        <div class="px-4 w-full h-11 bg-black flex gap-2 justify-between rounded-xl overflow-hidden">
-            <BaseHeaderNavigation :links="links" />
-            <BaseHeaderCart />
+    <header class="pt-2 pb-8">
+        <div class="container">
+            <div class="px-4 w-full h-11 bg-black flex gap-2 justify-between rounded-xl overflow-hidden">
+                <BaseHeaderNavigation :links="links" />
+                <BaseHeaderCart />
+            </div>
         </div>
-    </div>
+    </header>
 </template>
 
 <style scoped></style>
