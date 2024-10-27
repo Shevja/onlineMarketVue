@@ -1,26 +1,68 @@
 [
     {
         "id": 1,
-        "name": "Product 1",
-        "price": 29.99,
-        "description": "This is the first product",
-        "category": "Category 1",
-        "stock": 100
+        "name": "Продукт 1",
+        "price": 2999,
+        "description": "Это первый продукт",
+        "category": "Футболка",
+        "stock": 100,
+        "color": "Зеленый",
+        "size": "XL",
+        "material": "Сталь"
     },
     {
         "id": 2,
-        "name": "Product 2",
-        "price": 49.99,
-        "description": "This is the second product",
-        "category": "Category 2",
-        "stock": 50
+        "name": "Продукт 2",
+        "price": 4999,
+        "description": "Это второй продукт",
+        "category": "Футболка",
+        "stock": 50,
+        "color": "Желтый",
+        "size": "L",
+        "material": "Кожа"
     },
     {
         "id": 3,
-        "name": "Product 3",
-        "price": 19.99,
-        "description": "This is the third product",
-        "category": "Category 3",
-        "stock": 30
+        "name": "Продукт 3",
+        "price": 1999,
+        "description": "Это третий продукт",
+        "category": "Футболка",
+        "stock": 30,
+        "color": "Красный",
+        "size": "M",
+        "material": "Хлопок"
+    },
+    {
+        "id": 4,
+        "name": "Продукт 4",
+        "price": 2500,
+        "description": "Это четвертый продукт",
+        "category": "Шорты",
+        "stock": 25,
+        "color": "Зелёный",
+        "size": "S",
+        "material": "Бамбук"
+    },
+    {
+        "id": 5,
+        "name": "Продукт 5",
+        "price": 1200,
+        "description": "Это пятый продукт",
+        "category": "Толстовка",
+        "stock": 15,
+        "color": "Серый",
+        "size": "M",
+        "material": "Хлопок"
+    },
+    {
+        "id": 6,
+        "name": "Продукт 6",
+        "price": 1800,
+        "description": "Это шестой продукт",
+        "category": "Джинсы",
+        "stock": 20,
+        "color": "Синий",
+        "size": "L",
+        "material": "Полиэстер"
     }
 ]

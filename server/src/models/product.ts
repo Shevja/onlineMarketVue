@@ -9,7 +9,7 @@ interface IProduct extends Document {
     imageUrl: string;
 }
 
-const productSchema = new Schema<IProduct>({
+const productSchema = new Schema({
     name: {
         type: String,
         required: true,
@@ -27,6 +27,6 @@ const productSchema = new Schema<IProduct>({
     imageUrl: String
 }, { timestamps: true });
 
-const Product = model<IProduct>("Product", productSchema);
+const Product = model("Product", productSchema);
 
 export default Product;
