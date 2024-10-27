@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import Button from '@/components/ui/button/Button.vue';
+import { computed } from 'vue';
+import { useStore } from 'vuex';
 
 interface MetaInfo {
     id: number,
@@ -19,6 +21,18 @@ const props = defineProps({
         required: true,
     }
 })
+
+const store = useStore();
+const cartItems = computed(() => store.getters.getItemsFromCart);
+const itemInCart = computed(() => cartItems.value.find(item => item.id === props.meta.id));
+
+function addToCart() {
+    store.dispatch('addItemToCart', props.meta)
+}
+
+function removeFromCart() {
+    store.dispatch('removeItemFromCart', props.meta)
+}
 
 </script>
 
@@ -69,7 +83,13 @@ const props = defineProps({
                     </strong>
                 </div>
 
-                <Button class="bg-emerald-500 font-bold transition-colors hover:bg-emerald-600 active:bg-emerald-600">
+                <Button v-if="itemInCart" @click="removeFromCart"
+                    class="bg-emerald-500 font-bold transition-colors hover:bg-emerald-600 active:bg-emerald-600">
+                    Убрать из корзины
+                </Button>
+
+                <Button v-else @click="addToCart"
+                    class="bg-emerald-500 font-bold transition-colors hover:bg-emerald-600 active:bg-emerald-600">
                     В корзину
                 </Button>
             </div>
