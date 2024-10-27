@@ -21,7 +21,7 @@ const props = defineProps({
 <template>
     <ul class="flex text-slate-100">
         <li v-for="(link, index) in props.links" :key="link.id ? link.id : index">
-            <a :href="link.href" class="flex items-center px-4 min-w-32 h-full transition-colors hover:bg-green-600">
+            <a :href="link.href" class="flex items-center px-4 min-w-32 h-full font-semibold transition-colors hover:bg-emerald-600">
                 {{ link.label }}
             </a>
         </li>

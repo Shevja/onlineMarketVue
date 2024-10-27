@@ -12,9 +12,9 @@ const links = ref([
 </script>
 
 <template>
-    <header class="pt-2 pb-8">
+    <header class="pt-2 pb-8 sticky top-0">
         <div class="container">
-            <div class="px-4 w-full h-11 bg-black flex gap-2 justify-between rounded-xl overflow-hidden">
+            <div class="px-4 w-full h-11 bg-slate-950 flex gap-2 justify-between rounded-xl overflow-hidden">
                 <BaseHeaderNavigation :links="links" />
                 <BaseHeaderCart />
             </div>

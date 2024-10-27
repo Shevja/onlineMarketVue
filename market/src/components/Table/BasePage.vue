@@ -4,10 +4,12 @@ import BaseSidebar from './Sidebar/BaseSidebar.vue';
 </script>
 
 <template>
-    <div class="container">
-        <div class="flex gap-4">
-            <BaseSidebar class="w-1/4" />
-            <BaseBoard class="w-full" />
+    <section class="pb-12">
+        <div class="container">
+            <div class="flex gap-4">
+                <BaseSidebar class="w-1/4" />
+                <BaseBoard class="w-full" />
+            </div>
         </div>
-    </div>
+    </section>
 </template>

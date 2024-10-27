@@ -8,7 +8,6 @@ const products = ref(null);
 
 onMounted(async () => {
     products.value = await useGetProducts();
-    console.log(products.value);
 })
 
 </script>
