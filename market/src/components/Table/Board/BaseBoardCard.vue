@@ -73,9 +73,9 @@ function removeFromCart() {
                 </div>
             </div>
 
-            <div class="flex gap-4 items-center justify-between">
-                <div class="flex gap-2 items-baseline">
-                    <span>
+            <div class="flex flex-col flex-wrap gap-2 justify-between">
+                <div class="flex justify-between gap-2 items-baseline">
+                    <span class="text-sm">
                         Цена:
                     </span>
                     <strong class="text-lg">
@@ -84,13 +84,13 @@ function removeFromCart() {
                 </div>
 
                 <Button v-if="itemInCart" @click="removeFromCart"
-                    class="bg-emerald-500 font-bold transition-colors hover:bg-emerald-600 active:bg-emerald-600">
+                    class="bg-slate-400 font-bold transition-colors hover:bg-slate-500 active:bg-slate-300">
                     Убрать из корзины
-                </Button>
+                </Button> 
 
                 <Button v-else @click="addToCart"
                     class="bg-emerald-500 font-bold transition-colors hover:bg-emerald-600 active:bg-emerald-600">
-                    В корзину
+                    Добавить в корзину
                 </Button>
             </div>
         </div>

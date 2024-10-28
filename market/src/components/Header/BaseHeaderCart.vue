@@ -6,7 +6,6 @@ import { useStore } from 'vuex';
 const store = useStore()
 const totalPrice = computed(() => store.getters.getTotalPrice)
 
-console.log(totalPrice.value)
 </script>
 
 <template>
