@@ -5,8 +5,20 @@ import BaseBoardToolbar from './BaseBoardToolbar.vue';
 import useGetProducts from '@/services/getProducts';
 import { LoaderCircle } from 'lucide-vue-next';
 
-const products = ref(null);
-const error = ref(null);
+interface MetaInfo {
+    id: number,
+    name: string,
+    price: number,
+    description: string,
+    category: string,
+    stock: number,
+    color: string,
+    size: string,
+    material: string
+}
+
+const products = ref<MetaInfo[]>();
+const error = ref<string | null>(null);
 
 onMounted(async () => {
     [products.value, error.value] = await useGetProducts();
@@ -23,7 +35,7 @@ onMounted(async () => {
                 <LoaderCircle class="animate-spin w-14 h-14 text-emerald-600 mt-10" />
             </div>
 
-            <div v-else-if="products" class="grid grid-cols-2 xl:grid-cols-3 gap-4">
+            <div v-else-if="products" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
                 <template v-for="product in products" :key="product.id">
                     <BaseBoardCard :meta="product" />
                 </template>

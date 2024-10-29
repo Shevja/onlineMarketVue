@@ -26,7 +26,7 @@ onMounted(() => {
 <template>
     <Select v-model="value" class="">
         <SelectTrigger
-            class="p-3 flex gap-1 bg-transparent w-auto h-auto border-none rounded-none text-sm transition-colors focus:ring-0 focus:ring-offset-0 hover:bg-emerald-600">
+            class="p-2 flex gap-1 bg-transparent w-auto h-auto border-none rounded-lg text-sm transition-colors focus:ring-0 focus:ring-offset-0 hover:bg-emerald-600 hover:text-white">
             {{ preTitle }}
             <SelectValue />
         </SelectTrigger>

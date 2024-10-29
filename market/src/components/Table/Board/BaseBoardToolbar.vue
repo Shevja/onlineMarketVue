@@ -12,7 +12,7 @@ const selectItems = [
 </script>
 
 <template>
-    <div class=" bg-gray-700 border flex rounded-xl text-white overflow-hidden">
+    <div class="flex">
         <BaseSelect preTitle="Сортировка по" v-model="selectValue" :items="selectItems" />
     </div>
 </template>

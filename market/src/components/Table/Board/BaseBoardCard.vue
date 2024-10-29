@@ -15,15 +15,10 @@ interface MetaInfo {
     material: string
 }
 
-const props = defineProps({
-    meta: {
-        type: Object as () => MetaInfo,
-        required: true,
-    }
-})
+const props = defineProps<{ meta: MetaInfo }>()
 
 const store = useStore();
-const cartItems = computed(() => store.getters.getItemsFromCart);
+const cartItems = computed<MetaInfo[]>(() => store.getters.getItemsFromCart);
 const itemInCart = computed(() => cartItems.value.find(item => item.id === props.meta.id));
 
 function addToCart() {
@@ -83,10 +78,17 @@ function removeFromCart() {
                     </strong>
                 </div>
 
-                <Button v-if="itemInCart" @click="removeFromCart"
-                    class="bg-slate-400 font-bold transition-colors hover:bg-slate-500 active:bg-slate-300">
-                    Убрать из корзины
-                </Button> 
+                <div v-if="itemInCart" class="flex gap-2">
+                    <Button @click="removeFromCart"
+                        class="bg-red-300 font-bold transition-colors hover:bg-red-500 active:bg-slate-500">
+                        Убрать
+                    </Button>
+
+                    <Button @click=""
+                        class="w-full bg-sky-500 font-bold transition-colors hover:bg-sky-600 active:bg-sky-600">
+                        К оплате
+                    </Button>
+                </div>
 
                 <Button v-else @click="addToCart"
                     class="bg-emerald-500 font-bold transition-colors hover:bg-emerald-600 active:bg-emerald-600">
